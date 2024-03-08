@@ -1,0 +1,23 @@
+[
+  {
+    "text": "找到名称是工单2的信息",
+    "intent": "QUERY",
+    "slots": {
+      "name": "工单2"
+    }
+  },
+  {
+    "text": "需要查看工单1的数据",
+    "intent": "QUERY",
+    "slots": {
+      "name": "工单1"
+    }
+  },
+  {
+    "text": "寻找名为工单2的工单记录",
+    "intent": "QUERY",
+    "slots": {
+      "name": "工单2"
+    }
+  }
+]

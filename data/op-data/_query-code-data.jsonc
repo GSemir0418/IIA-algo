@@ -1,0 +1,72 @@
+[
+  {
+    "text": "请帮我查询编码为1的数据",
+    "intent": "QUERY",
+    "slots": {
+      "code": "1"
+    }
+  },
+  {
+    "text": "请查询编码为001A的工单信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "001A"
+    }
+  },
+  {
+    "text": "请显示编码为2的详细信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "2"
+    }
+  },
+  {
+    "text": "需要编码为009B的工单信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "009B"
+    }
+  },
+  {
+    "text": "我想查看编码为002C的项目",
+    "intent": "QUERY",
+    "slots": {
+      "code": "002C"
+    }
+  },
+  {
+    "text": "希望能够浏览到编码为678的数据记录",
+    "intent": "QUERY",
+    "slots": {
+      "code": "678"
+    }
+  },
+  {
+    "text": "访问编码为123的项目信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "123"
+    }
+  },
+  {
+    "text": "请快速检索1234编号的结果",
+    "intent": "QUERY",
+    "slots": {
+      "code": "1234"
+    }
+  },
+  {
+    "text": "我想要123号的详细信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "123"
+    }
+  },
+  {
+    "text": "能否帮忙拉出编码123的数据集",
+    "intent": "QUERY",
+    "slots": {
+      "code": "123"
+    }
+  }
+]

@@ -1,0 +1,7 @@
+bert-base-chinese/*
+save_model/*
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_STORE

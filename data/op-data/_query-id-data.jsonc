@@ -1,0 +1,374 @@
+[
+  {
+    "text": "找出id为123的记录",
+    "intent": "QUERY",
+    "slots": {
+      "id": "123"
+    }
+  },
+  {
+    "text": "查询id等于345的条目详情",
+    "intent": "QUERY",
+    "slots": {
+      "id": "345"
+    }
+  }, 
+  {
+    "text": "请展示id为678的数据",
+    "intent": "QUERY",
+    "slots": {
+      "id": "678"
+    }
+  },
+  {
+    "text": "请检索id为123的档案",
+    "intent": "QUERY",
+    "slots": {
+      "id": "123"
+    }
+  },
+  {
+    "text": "显示ID为678相关的信息",
+    "intent": "QUERY",
+    "slots": {
+      "id": "678"
+    }
+  },
+  {
+    "text": "获取ID为6的记录信息",
+    "intent": "QUERY",
+    "slots": {
+      "id": "6"
+    }
+  },
+  {
+    "text": "可否查找一下id是1标识的数据",
+    "intent": "QUERY",
+    "slots": {
+      "id": "1"
+    }
+  },
+  {
+    "text": "需要提取与ID455相匹配的记录详情",
+    "intent": "QUERY",
+    "slots": {
+      "id": "455"
+    }
+  },
+  {
+    "text": "想查阅ID为123的相关记录",
+    "intent": "QUERY",
+    "slots": {
+      "id": "123"
+    }
+  },
+  {
+    "text": "检视拥有345这个id的条目",
+    "intent": "QUERY",
+    "slots": {
+      "id": "345"
+    }
+  },
+  {
+    "text": "希望能够浏览到ID 678的数据记录",
+    "intent": "QUERY",
+    "slots": {
+      "id": "678"
+    }
+  },
+  {
+    "text": "展示一下带有ID ABC123的记录",
+    "intent": "QUERY",
+    "slots": {
+      "id": "ABC123"
+    }
+  },
+  {
+    "text": "寻找id12-34B的相关信息",
+    "intent": "QUERY",
+    "slots": {
+      "id": "12-34B"
+    }
+  },
+  {
+    "text": "我需要查阅的是ID ZX-001的资料",
+    "intent": "QUERY",
+    "slots": {
+      "id": "ZX-001"
+    }
+  },
+  {
+    "text": "把ID为123额条目给我展示下",
+    "intent": "QUERY",
+    "slots": {
+      "id": "123"
+    }
+  },
+  {
+    "text": "寻找ID123的条款记录有没有",
+    "intent": "QUERY",
+    "slots": {
+      "id": "123"
+    }
+  },
+  {
+    "text": "对于ID为456的项目，需要查看其进度",
+    "intent": "QUERY",
+    "slots": {
+      "id": "456"
+    }
+  },
+  {
+    "text": "可以找到带123标记的数据吗？",
+    "intent": "QUERY",
+    "slots": {
+      "id": "123"
+    }
+  },
+  {
+    "text": "请提取ID是123ABC的所有详细记录",
+    "intent": "QUERY",
+    "slots": {
+      "id": "123ABC"
+    }
+  },
+  {
+    "text": "找出完全匹配ID 45678的数据行",
+    "intent": "QUERY",
+    "slots": {
+      "id": "45678"
+    }
+  },
+  {
+    "text": "希望能够查到仅针对ID: 12345的信息",
+    "intent": "QUERY",
+    "slots": {
+      "id": "12345"
+    }
+  },
+  {
+    "text": "检索ID 111对应的客户信息",
+    "intent": "QUERY",
+    "slots": {
+      "id": "111"
+    }
+  },
+  {
+    "text": "读取ID为222的订单状态",
+    "intent": "QUERY",
+    "slots": {
+      "id": "222"
+    }
+  },
+  {
+    "text": "搜寻ID 333所关联的全部工单",
+    "intent": "QUERY",
+    "slots": {
+      "id": "333"
+    }
+  },
+  {
+    "text": "请帮我查询id为1ABC的数据",
+    "intent": "QUERY",
+    "slots": {
+      "id": "1ABC"
+    }
+  },
+  {
+    "text": "请查询id为001A的工单信息",
+    "intent": "QUERY",
+    "slots": {
+      "id": "001A"
+    }
+  },
+  {
+    "text": "请显示id为2IDe的详细信息",
+    "intent": "QUERY",
+    "slots": {
+      "id": "2IDe"
+    }
+  },
+  {
+    "text": "需要id为009B的工单信息",
+    "intent": "QUERY",
+    "slots": {
+      "id": "009B"
+    }
+  },
+  {
+    "text": "我想查看ID为002C的项目",
+    "intent": "QUERY",
+    "slots": {
+      "id": "002C"
+    }
+  },
+  {
+    "text": "希望能够浏览到id为678的数据记录",
+    "intent": "QUERY",
+    "slots": {
+      "id": "678"
+    }
+  },
+  {
+    "text": "访问ID为123的项目信息",
+    "intent": "QUERY",
+    "slots": {
+      "id": "123"
+    }
+  },
+  {
+    "text": "请快速检索1234编号的结果",
+    "intent": "QUERY",
+    "slots": {
+      "id": "1234"
+    }
+  },
+  {
+    "text": "我想要123号的详细信息",
+    "intent": "QUERY",
+    "slots": {
+      "id": "123"
+    }
+  },
+  {
+    "text": "能否帮忙拉出id是123的数据集",
+    "intent": "QUERY",
+    "slots": {
+      "id": "123"
+    }
+  },
+  {
+    "text": "能否帮我查找所有id是额ID10012的订单",
+    "intent": "QUERY",
+    "slots": {
+      "id": "ID10012"
+    }
+  },
+  {
+    "text": "显示所有id为4567的工单",
+    "intent": "QUERY",
+    "slots": {
+      "id": "4567"
+    }
+  },
+  {
+    "text": "找出id为IDAVC的工单",
+    "intent": "QUERY",
+    "slots": {
+      "id": "IDAVC"
+    }
+  },
+  {
+    "text": "查看所有id为DDID4的记录",
+    "intent": "QUERY",
+    "slots": {
+      "id": "DDID4"
+    }
+  },
+  {
+    "text": "显示ID为099的工单列表",
+    "intent": "QUERY",
+    "slots": {
+      "id": "099"
+    }
+  },
+  {
+    "text": "找到id是456的信息",
+    "intent": "QUERY",
+    "slots": {
+      "id": "456"
+    }
+  },
+  {
+    "text": "需要查看ID0112的数据",
+    "intent": "QUERY",
+    "slots": {
+      "id": "0112"
+    }
+  },
+  {
+    "text": "寻找id为123的工单记录",
+    "intent": "QUERY",
+    "slots": {
+      "id": "123"
+    }
+  },
+  {
+    "text": "我需要找出所有ID等于100的数据项",
+    "intent": "QUERY",
+    "slots": {
+      "id": "100"
+    }
+  },
+
+  {
+    "text": "急需看一下ID为345的那个记录是啥",
+    "intent": "QUERY",
+    "slots": {
+      "id": "345"
+    }
+  },
+  {
+    "text": "查询id为0010的当前状态",
+    "intent": "QUERY",
+    "slots": {
+      "id": "0010"
+    }
+  },
+  {
+    "text": "显示所有id为ID900C的订单",
+    "intent": "QUERY",
+    "slots": {
+      "id": "ID900C"
+    }
+  },
+  {
+    "text": "把那个id是321的记录给我看看",
+    "intent": "QUERY",
+    "slots": {
+      "id": "321"
+    }
+  },
+  {
+    "text": "查ID9001",
+    "intent": "QUERY",
+    "slots": {
+      "id": "9001"
+    }
+  },
+  {
+    "text": "查ID2211",
+    "intent": "QUERY",
+    "slots": {
+      "id": "2211"
+    }
+  },
+  {
+    "text": "查ID7",
+    "intent": "QUERY",
+    "slots": {
+      "id": "7"
+    }
+  },
+  {
+    "text": "查IDAB00D",
+    "intent": "QUERY",
+    "slots": {
+      "id": "AB00D"
+    }
+  },
+  {
+    "text": "查id5600",
+    "intent": "QUERY",
+    "slots": {
+      "id": "5600"
+    }
+  },
+  {
+    "text": "查ID130",
+    "intent": "QUERY",
+    "slots": {
+      "id": "130"
+    }
+  }
+]

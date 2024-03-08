@@ -1,0 +1,37 @@
+[
+  {
+    "text": "能否帮我查找所有锁定的订单",
+    "intent": "QUERY",
+    "slots": {
+      "status": "locked"
+    }
+  },
+  {
+    "text": "显示所有状态为锁定的工单",
+    "intent": "QUERY",
+    "slots": {
+      "status": "locked"
+    }
+  },
+  {
+    "text": "找出状态为锁定的工单",
+    "intent": "QUERY",
+    "slots": {
+      "status": "locked"
+    }
+  },
+  {
+    "text": "查看所有状态为未锁定的记录",
+    "intent": "QUERY",
+    "slots": {
+      "status": "unlocked"
+    }
+  },
+  {
+    "text": "显示状态为已锁定的工单列表",
+    "intent": "QUERY",
+    "slots": {
+      "status": "locked"
+    }
+  }
+]

@@ -1,0 +1,5 @@
+[PAD]
+[UNK]
+[O]
+I_id
+B_id

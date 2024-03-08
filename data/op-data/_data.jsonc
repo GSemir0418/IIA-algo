@@ -1,0 +1,88 @@
+
+[
+  // {
+  //   "text": "我想要查找昨天创建的条目",
+  //   "intent": "QUERY",
+  //   "slots": {
+  //     "date": "yesterday"
+  //   }
+  // },
+  // {
+  //   "text": "删除状态为锁定的信息",
+  //   "intent": "DELETE",
+  //   "slots": {
+  //     "status": "locked"
+  //   }
+  // },
+  // {
+  //   "text": "移除所有锁定的项目",
+  //   "intent": "DELETE",
+  //   "slots": {
+  //     "status": "locked"
+  //   }
+  // },
+  // {
+  //   "text": "清除编码为1的数据",
+  //   "intent": "DELETE",
+  //   "slots": {
+  //     "code": "1"
+  //   }
+  // },
+  // {
+  //   "text": "撤销产品代码为579的商品",
+  //   "intent": "DELETE",
+  //   "slots": {
+  //     "code": "579"
+  //   }
+  // },
+  // {
+  //   "text": "我要更新订单号为789的状态为锁定",
+  //   "intent": "UPDATE",
+  //   "slots": {
+  //     "code": "789",
+  //     "status": "locked"
+  //   }
+  // },
+  // {
+  //   "text": "更新工单ID为456的名称为name",
+  //   "intent": "UPDATE",
+  //   "slots": {
+  //     "id": "456",
+  //     "name": "name"
+  //   }
+  // },
+  // {
+  //   "text": "将编号为0003的工单状态改为正常",
+  //   "intent": "UPDATE",
+  //   "slots": {
+  //     "code": "0003",
+  //     "status": "normal"
+  //   }
+  // },
+  // {
+  //   "text": "修改name工单的编码为1234",
+  //   "intent": "UPDATE",
+  //   "slots": {
+  //     "name": "name",
+  //     "code": "1234"
+  //   }
+  // }
+  {
+    "text": "讲个笑话听听",
+    "intent": "NONE",
+    "slots": {
+    }
+  },
+  {
+    "text": "我想听今天的新闻",
+    "intent": "NONE",
+    "slots": {
+    }
+  },
+  {
+    "text": "设定明早七点的闹钟",
+    "intent": "NONE",
+    "slots": {
+    }
+  },
+]
