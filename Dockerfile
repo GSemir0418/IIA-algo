@@ -11,7 +11,7 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 暴露端口，如果你的应用有Web接口
-EXPOSE 5432
+# EXPOSE 5432
 
 # 运行你的应用，假设入口文件为app.py
-CMD ["python", "app.py"]
+# CMD ["python", "app.py"]
