@@ -18,11 +18,11 @@ from models import JointBert
 from tools import save_module, split_data
 
 # dev 函数负责评估模型在验证数据集上的性能
-# 将模型设置为评估模式。
 # 禁用梯度计算，这样可以减少内存消耗并加速计算。
 # 通过模型预测意图和槽位，然后根据模型输出计算准确率。
 # 最后，函数返回总的开发集准确率，以及单独的意图准确率和槽位准确率。
 def dev(model, val_dataloader, device, slot_dict):
+    # 将模型设置为评估模式。
     model.eval()
     intent_acc, slot_acc = 0, 0
     all_true_intent, all_pred_intent = [], []
@@ -62,19 +62,22 @@ def train(args):
     # model_save_dir = args.save_dir + "/" + args.model_path.split("/")[-1]
     model_save_dir = args.save_dir 
 
+    # 读取命令行参数中提供的槽位和意图标签路径，创建字典用以编解码标签
     with open(args.slot_label_path, 'r') as f:
         slot_labels = f.read().strip('\n').split('\n')
     slot_dict = dict(zip(range(len(slot_labels)), slot_labels))
 
     # -----------set cuda environment-------------
+    # 判断使用CPU还是GPU训练
     os.environ["CUDA_VISIBLE_DEVICES"] = args.cuda_devices
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
-    # -----------load tokenizer 加载分词器-----------
+    # -----------load tokenizer 加载 BERT 分词器-----------
     tokenizer = BertTokenizer.from_pretrained(args.model_path)
     save_module(tokenizer, model_save_dir)
 
     # -----------load data 加载数据-----------------
+    # 读取训练和验证数据，并将数据封装成适用于训练的格式
     train_data, val_data = split_data(args.train_data_path, args.train_val_data_split)
 
     train_dataset = IntentSlotDataset.load_from_path(
@@ -92,7 +95,7 @@ def train(args):
     )
 
     # -----------load model and dataset 加载模型和数据集-----------
-    # 初始化模型，并将其移至指定的设备（CPU或GPU）
+    # 初始化BERT模型用于联合意图和槽位填充任务
     model = JointBert.from_pretrained(
         args.model_path,
         slot_label_num=train_dataset.slot_label_num,
@@ -100,6 +103,7 @@ def train(args):
     )
     model = model.to(device).train()
 
+    # 准备数据加载器，将数据打乱并批量载入模型
     train_dataloader = DataLoader(
         train_dataset,
         shuffle=True,
@@ -113,6 +117,7 @@ def train(args):
         collate_fn=val_dataset.batch_collate_fn)
 
     # -----------calculate training steps-----------
+    # 计算训练的总步数
     if args.max_training_steps > 0:
         total_steps = args.max_training_steps
     else:
@@ -121,7 +126,7 @@ def train(args):
     print('calculated total optimizer update steps : {}'.format(total_steps))
 
     # -----------prepare optimizer and schedule------------
-    # 准备优化器和学习率调度器。
+    # 准备优化器和学习率调度器
     parameter_names_no_decay = ['bias', 'LayerNorm.weight']
     optimizer_grouped_parameters = [
         # 这些参数会被应用常规的权重衰减（由 args.weight_decay 指定）
@@ -142,52 +147,55 @@ def train(args):
     scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=args.warmup_steps, num_training_steps=total_steps)
 
     # -----------training-------------
-    # 循环执行多个训练周期（轮次），在每个周期中：
-    # 对训练数据进行迭代，计算损失并进行后向传播。
-    # 更新参数并根据需要进行梯度裁剪。
-    # 在每个周期结束后，对模型在验证集上进行评估，并保存性能最佳的模型。
+    # 初始化最佳准确率
     max_acc = 0
+    # 开始训练循环(epoch 是训练的轮次)
     for epoch in range(args.train_epochs):
+        # 初始化总损失: 在开始新的轮次之前，把总损失设置为0，后面会用它来计算这个轮次的平均损失
         total_loss = 0
+        # 设置模型为训练模式
         model.train()
+        # 遍历数据加载器中的批次
         for step, batch in enumerate(train_dataloader):
+            # 处理批次内数据: 从批次中提取出输入的ID、意图标签和槽位标签
             input_ids, intent_labels, slot_labels = batch
-
+            # 模型推理和计算损失: 将数据送入模型进行处理，并返回结果。模型输出一个字典，其中包含了损失，即当前模型的表现
             outputs = model(
                 input_ids=torch.tensor(input_ids).long().to(device),
                 intent_labels=torch.tensor(intent_labels).long().to(device),
                 slot_labels=torch.tensor(slot_labels).long().to(device)
             )
-
+            # 累加损失值
             loss = outputs['loss']
             total_loss += loss.item()
-
+            # 处理梯度累积: 如果你设置梯度累积步骤大于1，则在执行反向传播之前，先将损失除以累积步骤数
             if args.gradient_accumulation_steps > 1:
                 loss = loss / args.gradient_accumulation_steps
-
+            # 损失反向传播: 反向传播过程中，计算损失关于模型参数的梯度
             loss.backward()
-
+            # 梯度裁剪和更新参数: 检查是否到了更新梯度的步骤。裁剪梯度可以防止训练出现不稳定的情况。调用优化器和学习率调度器来更新参数，并重置梯度
             if step % args.gradient_accumulation_steps == 0:
                 # 用于对梯度进行裁剪，以防止在神经网络训练过程中出现梯度爆炸的问题。
                 torch.nn.utils.clip_grad_norm_(model.parameters(), args.max_grad_norm)
-
                 optimizer.step()
                 scheduler.step()
                 model.zero_grad()
-
+        # 计算这个轮次的平均损失: 把总损失除以批次数量来获取这个轮次的平均损失
         train_loss = total_loss / len(train_dataloader)
-
+        # 评估模型在验证集上的性能: 使用之前定义的 dev 函数来计算模型在验证集上的准确率
         dev_acc, intent_avg, slot_avg = dev(model, val_dataloader, device, slot_dict)
-
+        # 保存性能最佳的模型
         flag = False
         if max_acc < dev_acc:
             max_acc = dev_acc
             flag = True
             save_module(model, model_save_dir)
+        # 输出训练信息
         print(f"[{epoch}/{args.train_epochs}] train loss: {train_loss}  dev intent_avg: {intent_avg} "
               f"def slot_avg: {slot_avg} save best model: {'*' if flag else ''}")
-
+    # 训练结束后的最后评估: 在所有训练轮次结束后，再次评估模型在验证集上的表现
     dev_acc, intent_avg, slot_avg = dev(model, val_dataloader, device, slot_dict)
+    # 输出最终模型的性能和保存位置
     print("last model dev intent_avg: {} def slot_avg: {}".format(intent_avg, slot_avg))
     print("模型保存位置：" + model_save_dir)
 
