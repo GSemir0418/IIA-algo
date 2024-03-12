@@ -14,6 +14,7 @@ if __name__ == '__main__':
     # 代码定义了意图标签 intent_labels 和槽位标签 slot_labels 的初始列表。列表中的 [UNK], [PAD] 和 [O] 分别代表未知标签、填充标签和普通标签。
     intent_labels = ['[UNK]']
     slot_labels = ['[PAD]','[UNK]', '[O]']
+    
     for item in data:
         # 对于每个项目中的 intent 字段，如果它不在 intent_labels 列表中，就把它添加进去
         if item['intent'] not in intent_labels:
