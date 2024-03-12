@@ -370,5 +370,447 @@
     "slots": {
       "id": "130"
     }
+  },
+  {
+    "text": "请帮我查询编码为1的数据",
+    "intent": "QUERY",
+    "slots": {
+      "code": "1"
+    }
+  },
+  {
+    "text": "请查询编码为001A的工单信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "001A"
+    }
+  },
+  {
+    "text": "请显示编码为2的详细信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "2"
+    }
+  },
+  {
+    "text": "需要编码为009B的工单信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "009B"
+    }
+  },
+  {
+    "text": "我想查看编码为002C的项目",
+    "intent": "QUERY",
+    "slots": {
+      "code": "002C"
+    }
+  },
+  {
+    "text": "希望能够浏览到编码为678的数据记录",
+    "intent": "QUERY",
+    "slots": {
+      "code": "678"
+    }
+  },
+  {
+    "text": "访问编码为123的项目信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "123"
+    }
+  },
+  {
+    "text": "请快速检索1234编号的结果",
+    "intent": "QUERY",
+    "slots": {
+      "code": "1234"
+    }
+  },
+  {
+    "text": "我想要123号的详细信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "123"
+    }
+  },
+  {
+    "text": "能否帮忙拉出编码123的数据集",
+    "intent": "QUERY",
+    "slots": {
+      "code": "123"
+    }
+  },
+  {
+    "text": "找出编码为123的记录",
+    "intent": "QUERY",
+    "slots": {
+      "code": "123"
+    }
+  },
+  {
+    "text": "查询编码等于345的条目详情",
+    "intent": "QUERY",
+    "slots": {
+      "code": "345"
+    }
+  }, 
+  {
+    "text": "请展示编码为678的数据",
+    "intent": "QUERY",
+    "slots": {
+      "code": "678"
+    }
+  },
+  {
+    "text": "请检索code为123的档案",
+    "intent": "QUERY",
+    "slots": {
+      "code": "123"
+    }
+  },
+  {
+    "text": "显示编码为678相关的信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "678"
+    }
+  },
+  {
+    "text": "获取编码为6的记录信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "6"
+    }
+  },
+  {
+    "text": "可否查找一下编码是1标识的数据",
+    "intent": "QUERY",
+    "slots": {
+      "code": "1"
+    }
+  },
+  {
+    "text": "需要提取与code455相匹配的记录详情",
+    "intent": "QUERY",
+    "slots": {
+      "code": "455"
+    }
+  },
+  {
+    "text": "想查阅code为123的相关记录",
+    "intent": "QUERY",
+    "slots": {
+      "code": "123"
+    }
+  },
+  {
+    "text": "检视拥有345这个编码的条目",
+    "intent": "QUERY",
+    "slots": {
+      "code": "345"
+    }
+  },
+  {
+    "text": "希望能够浏览到编码 678的数据记录",
+    "intent": "QUERY",
+    "slots": {
+      "code": "678"
+    }
+  },
+  {
+    "text": "展示一下带有code ABC123的记录",
+    "intent": "QUERY",
+    "slots": {
+      "code": "ABC123"
+    }
+  },
+  {
+    "text": "寻找code12-34B的相关信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "12-34B"
+    }
+  },
+  {
+    "text": "我需要查阅的是code ZX-001的资料",
+    "intent": "QUERY",
+    "slots": {
+      "code": "ZX-001"
+    }
+  },
+  {
+    "text": "把code为123额条目给我展示下",
+    "intent": "QUERY",
+    "slots": {
+      "code": "123"
+    }
+  },
+  {
+    "text": "寻找code123的条款记录有没有",
+    "intent": "QUERY",
+    "slots": {
+      "code": "123"
+    }
+  },
+  {
+    "text": "对于编码为456的项目，需要查看其进度",
+    "intent": "QUERY",
+    "slots": {
+      "code": "456"
+    }
+  },
+  {
+    "text": "可以找到带123标记的数据吗？",
+    "intent": "QUERY",
+    "slots": {
+      "code": "123"
+    }
+  },
+  {
+    "text": "请提取编码是123ABC的所有详细记录",
+    "intent": "QUERY",
+    "slots": {
+      "code": "123ABC"
+    }
+  },
+  {
+    "text": "找出完全匹配编码 45678的数据行",
+    "intent": "QUERY",
+    "slots": {
+      "code": "45678"
+    }
+  },
+  {
+    "text": "希望能够查到仅针对编码: 12345的信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "12345"
+    }
+  },
+  {
+    "text": "检索编码 111对应的客户信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "111"
+    }
+  },
+  {
+    "text": "读取编码为222的订单状态",
+    "intent": "QUERY",
+    "slots": {
+      "code": "222"
+    }
+  },
+  {
+    "text": "搜寻编码 333所关联的全部工单",
+    "intent": "QUERY",
+    "slots": {
+      "code": "333"
+    }
+  },
+  {
+    "text": "请帮我查询code为1ABC的数据",
+    "intent": "QUERY",
+    "slots": {
+      "code": "1ABC"
+    }
+  },
+  {
+    "text": "请查询编码为001A的工单信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "001A"
+    }
+  },
+  {
+    "text": "请显示code为2codee的详细信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "2codee"
+    }
+  },
+  {
+    "text": "需要编码为009B的工单信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "009B"
+    }
+  },
+  {
+    "text": "我想查看code为002C的项目",
+    "intent": "QUERY",
+    "slots": {
+      "code": "002C"
+    }
+  },
+  {
+    "text": "希望能够浏览到code为678的数据记录",
+    "intent": "QUERY",
+    "slots": {
+      "code": "678"
+    }
+  },
+  {
+    "text": "访问编码为123的项目信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "123"
+    }
+  },
+  {
+    "text": "请快速检索1234编号的结果",
+    "intent": "QUERY",
+    "slots": {
+      "code": "1234"
+    }
+  },
+  {
+    "text": "我想要123号的详细信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "123"
+    }
+  },
+  {
+    "text": "能否帮忙拉出编码是123的数据集",
+    "intent": "QUERY",
+    "slots": {
+      "code": "123"
+    }
+  },
+  {
+    "text": "能否帮我查找所有code是额code10012的订单",
+    "intent": "QUERY",
+    "slots": {
+      "code": "code10012"
+    }
+  },
+  {
+    "text": "显示所有code为4567的工单",
+    "intent": "QUERY",
+    "slots": {
+      "code": "4567"
+    }
+  },
+  {
+    "text": "找出编码为codeAVC的工单",
+    "intent": "QUERY",
+    "slots": {
+      "code": "codeAVC"
+    }
+  },
+  {
+    "text": "查看所有code为DDcode4的记录",
+    "intent": "QUERY",
+    "slots": {
+      "code": "DDcode4"
+    }
+  },
+  {
+    "text": "显示编码为099的工单列表",
+    "intent": "QUERY",
+    "slots": {
+      "code": "099"
+    }
+  },
+  {
+    "text": "找到编码是456的信息",
+    "intent": "QUERY",
+    "slots": {
+      "code": "456"
+    }
+  },
+  {
+    "text": "需要查看code0112的数据",
+    "intent": "QUERY",
+    "slots": {
+      "code": "0112"
+    }
+  },
+  {
+    "text": "寻找编码为123的工单记录",
+    "intent": "QUERY",
+    "slots": {
+      "code": "123"
+    }
+  },
+  {
+    "text": "我需要找出所有code等于100的数据项",
+    "intent": "QUERY",
+    "slots": {
+      "code": "100"
+    }
+  },
+
+  {
+    "text": "急需看一下code为345的那个记录是啥",
+    "intent": "QUERY",
+    "slots": {
+      "code": "345"
+    }
+  },
+  {
+    "text": "查询code为0010的当前状态",
+    "intent": "QUERY",
+    "slots": {
+      "code": "0010"
+    }
+  },
+  {
+    "text": "显示所有code为code900C的订单",
+    "intent": "QUERY",
+    "slots": {
+      "code": "code900C"
+    }
+  },
+  {
+    "text": "把那个编码是321的记录给我看看",
+    "intent": "QUERY",
+    "slots": {
+      "code": "321"
+    }
+  },
+  {
+    "text": "查code9001",
+    "intent": "QUERY",
+    "slots": {
+      "code": "9001"
+    }
+  },
+  {
+    "text": "查code2211",
+    "intent": "QUERY",
+    "slots": {
+      "code": "2211"
+    }
+  },
+  {
+    "text": "查code7",
+    "intent": "QUERY",
+    "slots": {
+      "code": "7"
+    }
+  },
+  {
+    "text": "查codeAB00D",
+    "intent": "QUERY",
+    "slots": {
+      "code": "AB00D"
+    }
+  },
+  {
+    "text": "查编码5600",
+    "intent": "QUERY",
+    "slots": {
+      "code": "5600"
+    }
+  },
+  {
+    "text": "查code130",
+    "intent": "QUERY",
+    "slots": {
+      "code": "130"
+    }
   }
 ]
